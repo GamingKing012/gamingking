@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GamingKing Admin</title><link rel="stylesheet" href="/style.css"></head><body>
+<header class="top"><a class="brand" href="/">♛ Gaming<span>King</span></a><a class="admin-link" href="/">Store</a></header><main class="wrap admin-wrap">
+<section class="hero compact"><p class="eyebrow">PRIVATE CONTROL PANEL</p><h1>Store <span>admin</span></h1><p>Manage products, redeem-code stock and orders.</p></section>
+<section id="login" class="panel"><h2>Admin login</h2><form id="login-form"><label>Username</label><input id="username" required><label>Password</label><input id="password" type="password" required><button class="primary">Sign in</button></form></section>
+<div id="dashboard" class="hidden">
+<section class="panel"><h2>Add product</h2><form id="product-form"><label>Product name</label><input id="pname" required><label>Description</label><input id="pdesc"><label>Unit price (USD)</label><input id="pprice" type="number" min="0.01" step="0.01" required><button class="primary">Create product</button></form></section>
+<section class="panel"><h2>Products & code stock</h2><div id="admin-products"></div></section>
+<section class="panel"><h2>Recent orders</h2><div id="admin-orders"></div></section>
+</div></main><script src="/admin.js"></script></body></html>

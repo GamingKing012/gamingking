@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GamingKing — Instant Digital Delivery</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="/">♛ Gaming<span>King</span></a><a class="admin-link" href="/admin.html">Admin</a></header>
+<main class="wrap">
+  <section class="hero"><p class="eyebrow">DIGITAL GOODS • INSTANT DELIVERY</p><h1>Your game codes.<br><span>Delivered instantly.</span></h1><p>Choose a product, pay securely with crypto, and receive your redeem codes automatically.</p></section>
+  <section><div class="section-head"><h2>Available products</h2><span class="muted">Live stock</span></div><div id="products" class="products"><p class="muted">Loading products…</p></div></section>
+  <section id="order-panel" class="panel hidden">
+    <div class="section-head"><h2 id="selected-name">Buy product</h2><button id="close-order" class="quiet">Close</button></div>
+    <form id="order-form">
+      <input type="hidden" id="product-id">
+      <label>Email for delivery</label><input id="email" type="email" placeholder="you@example.com" required>
+      <label>Quantity</label><input id="quantity" type="number" min="1" max="50" value="1" required>
+      <div class="total-line"><span>Total</span><strong id="total">$0.00</strong></div>
+      <button class="primary" type="submit">Continue to crypto payment ↗</button>
+      <p class="tiny">Your order is delivered only after the payment provider confirms the transaction.</p>
+    </form>
+  </section>
+  <section id="order-result" class="panel hidden"></section>
+  <footer>© <span id="year"></span> GamingKing · Secure digital delivery</footer>
+</main>
+<script src="/app.js"></script>
+</body></html>
