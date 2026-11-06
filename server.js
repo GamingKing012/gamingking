@@ -54,7 +54,11 @@ try { db.exec("ALTER TABLE orders ADD COLUMN access_hash TEXT"); } catch (e) {
 
 const adminSessions = new Map(); // Short-lived process sessions; configure persistent session storage for multi-instance production.
 app.use(helmet({ contentSecurityPolicy: false }));
-app.use(express.static(path.join(__dirname, "public")));
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
+app.get("/admin.html", (req, res) => res.sendFile(path.join(__dirname, "admin.html")));
+app.get("/style.css", (req, res) => res.sendFile(path.join(__dirname, "style.css")));
+app.get("/app.js", (req, res) => res.sendFile(path.join(__dirname, "app.js")));
+app.get("/admin.js", (req, res) => res.sendFile(path.join(__dirname, "admin.js")));
 app.use(express.json({
   limit: "1mb",
   verify: (req, res, buf) => {
